@@ -3,31 +3,50 @@ version: "2.0"
 intents:
   - greet
   - goodbye
-  - affirm
-  - deny
-  - mood_great
-  - mood_unhappy
-  - bot_challenge
+
+entities:
+  - main_category
+  - vehicle_category
+  - vehicle_info
+
+slots:
+  main_category:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  vehicle_category:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
+
+  vehicle_info:
+    type: rasa.shared.core.slots.TextSlot
+    initial_value: null
+    auto_fill: true
+    influence_conversation: true
 
 responses:
   utter_greet:
-  - text: "Hey! How are you?"
-
-  utter_cheer_up:
-  - text: "Here is something to cheer you up:"
-    image: "https://i.imgur.com/nGF1K8f.jpg"
-
-  utter_did_that_help:
-  - text: "Did that help you?"
-
-  utter_happy:
-  - text: "Great, carry on!"
+  - text: "🤖 Hey! Im a S&D chatbot assistant!! ask me an question.\n choose from below option"
+    buttons:
+      - title: "Vehicle Technical Characteristics"
+        payload: '/main_button{"main_category":"vehicle_technical_characteristics"}'
+      - title: "Realtime Vehicle Ordering Data"
+        payload: '/main_button{"main_category":"realtime_vehicle_ordering_data"}'
 
   utter_goodbye:
-  - text: "Bye"
+  - text: "🤖 Bye"
 
-  utter_iamabot:
-  - text: "I am a bot, powered by Rasa."
+actions:
+  # - action_vehicle_technical_characteristics
+  # - action_realtime_vehicle_ordering_data
+  - action_main_button
+  - action_vehicle_category_button
+  - action_vehicle_info_button
+  - action_Vehicle_number
 
 session_config:
   session_expiration_time: 60
