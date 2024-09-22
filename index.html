@@ -1,0 +1,115 @@
+
+    <!DOCTYPE html>
+    <html>
+    <head>
+    <style>
+    body{
+      margin: 0;
+    }
+    
+      .header{
+        height: 50px;
+        background: black;
+        color: white;
+      display: flex;
+      align-items: center;
+      }
+    
+    .headerLogo{
+      width: 34px;
+      padding: 10px;
+    }
+    
+    .section{
+      position: relative;
+    }
+    
+    .sectionContent{
+      position: absolute;
+      width: 40%;
+      top: 21%;
+      left: 3%;
+      line-height: 1.5;
+      border: 1px solid #ccc;
+      border-radius: 10px;
+      padding: 20px;
+      background: #ddd7d74a;
+    }
+    
+    .sectionLogo{
+      width:100%
+    }
+    
+    .footer{
+      height: 20px;
+      text-align: center;
+      background: black;
+      color: white;
+    }
+    </style>
+    <title>ASK</title>
+    </head>
+    <body>
+    <div class="header"> 
+		<img class="headerLogo" src="logo.png">
+		  ASK
+    </div>
+	  
+	  <div class="section">
+		  <div class="sectionContent">
+		  
+      <h2>HI BOT TITLE, </h2> <hr>
+		  
+			<h3> Welcome to ASK - Chatbot as a platform </h3>
+			  We provide multiple services.
+        
+       <ol>
+        <li>FAQ</li>
+        <li>Conversation</li> 
+        <li>Knowledge search</li>
+        </ol>
+
+        Business users need to register their needs, following which we offer them different ways to avail our Chatbot services.
+
+		  </div>
+		    <img class="sectionLogo" src="rntbci.png">
+	  </div>
+	  
+	    <div class="footer"> 
+		    Developed by ATG-COE
+      </div>
+      
+      <script> 
+      function include(t,e,s){if("js"==e)(a=document.createElement("script")).src=t,a.type="text/javascript",a.className="script-class",a.async=!1;else if("css"==e){var a;(a=document.createElement("link")).setAttribute("rel","stylesheet"),a.setAttribute("type","text/css"),a.setAttribute("class","script-class"),a.setAttribute("href",t)}document.getElementsByTagName(s)[0].appendChild(a)};
+      sessionStorage.setItem("chatbot-details",JSON.stringify({
+        chatbot_language : "en",
+        chatbot_id: "Pm0kttmx0",
+        chatbot_env: "http://localhost:7072/"
+      }));
+      !(function () {
+         let e = document.createElement("script"),
+        t = document.head || document.getElementsByTagName("head")[0];
+        (e.src = "https://cdn.jsdelivr.net/npm/rasa-webchat/lib/index.js"), 
+        (e.async = !0), 
+        (e.onload = () => { 
+          window.WebChat.default( 
+            { customData: { 
+              language: "en", 
+              ProjectID: "Pm0kttmx0" }, 
+              socketUrl: "http://localhost:5005", 
+              title: "Bot Title", 
+              params: { storage: "session" }, 
+              profileAvatar: "http://localhost:7070/static/Pm0kttmx0/bot_image/Pm0kttmx0_small.png", 
+              showFullScreenButton: true,showMessageDate: true}, null ); 
+              include('http://localhost:7070/static/default/js/autocomplete.js', 'js', 'body');include('http://localhost:7070/static/default/css/autocomplete.css', 'css', 'body');
+            }), 
+            t.insertBefore(e, t.firstChild); })(); 
+            </script>
+            
+      <style type ="text/css"> .rw-conversation-container .rw-header {background-color: #123456 !important ;} .rw-conversation-container .rw-messages-container .rw-message .rw-client {background-color: #123456 !important;}.rw-launcher {background-color: #123456 !important;cursor: pointer} .rw-conversation-container .rw-reply { background-color:#123456 !important;border: 1px solid #123456 ; } .rw-carousel-card-image { display: none !important; } .rw-carousel-card{ min-height: 210px !important; box-shadow: 5px 5px 5px rgb(68 68 68 / 60%) !important; }   .rw-carousel-container { min-height: 0px !important;} .rw-carousel-card-title {  margin: 15px 9px 10px 9px !important; } .rw-carousel-buttons-container {margin-bottom: 0px !important; margin-top: 2.5rem; display: flex !important; flex-wrap: wrap !important; } .rw-carousel-card-subtitle { opacity: 0.7 !important;}  .rw-reply{display: inline !important; } .rw-conversation-container .rw-reply{ background-color: white !important;  border: none !important; padding: 0 !important; color: blue !important; box-shadow: none !important; text-decoration: underline !important; } .rw-carousel-container .rw-carousel-card .rw-carousel-buttons-container .rw-reply{ margin: 5px !important; }.rw-carousel-container .rw-carousel-card{  min-width: 350px !important;} </style>
+      
+      
+    </body>
+    </html>
+    
+    
